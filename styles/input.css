@@ -2,47 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-.display-xl{
-    @apply font-rammetto-one text-2xl font-normal;
-}
-.display-lg{
-    @apply font-rammetto-one text-xl font-normal;
-}
-.display-md{
-    @apply font-rammetto-one text-base font-normal;
-}
-
-.title-hg{
-    @apply font-rajdhani text-[32px] leading-9 font-bold;
-}
-.title-xl{
-    @apply font-rajdhani text-2xl font-bold;
-}
-.title-lg{
-    @apply font-rajdhani text-xl font-bold;
-}
-.title-xs{
-    @apply font-rajdhani text-xs font-normal;
-}
-
-.input-text{
-    @apply font-nunito text-base font-normal;
-}
-.text-md-regular{
-    @apply font-nunito text-base leading-[160%] font-normal;
-}
-.text-md-bold{
-    @apply font-nunito text-base leading-[160%] font-bold;
-}
-.text-sm-regular{
-    @apply font-nunito text-sm leading-[160%] font-normal;
-}
-.text-sm-bold{
-    @apply font-nunito text-sm leading-[160%] font-bold;
-}
-.text-xs-regular{
-    @apply font-nunito text-xs leading-[160%] font-normal;
-}
-.text-xs-bold{
-    @apply font-nunito text-xs leading-[160%] font-bold;
+@layer components{
+    .display-xl{
+        @apply font-rammetto-one text-2xl font-normal;
+    }
+    .display-lg{
+        @apply font-rammetto-one text-xl font-normal;
+    }
+    .display-md{
+        @apply font-rammetto-one text-base font-normal;
+    }
+    
+    .title-hg{
+        @apply font-rajdhani text-[32px] leading-9 font-bold;
+    }
+    .title-xl{
+        @apply font-rajdhani text-2xl font-bold;
+    }
+    .title-lg{
+        @apply font-rajdhani text-xl font-bold;
+    }
+    .title-xs{
+        @apply font-rajdhani text-xs font-normal;
+    }
+    
+    .input-text{
+        @apply font-nunito text-base font-normal;
+    }
+    .text-md-regular{
+        @apply font-nunito text-base leading-[160%] font-normal;
+    }
+    .text-md-bold{
+        @apply font-nunito text-base leading-[160%] font-bold;
+    }
+    .text-sm-regular{
+        @apply font-nunito text-sm leading-[160%] font-normal;
+    }
+    .text-sm-bold{
+        @apply font-nunito text-sm leading-[160%] font-bold;
+    }
+    .text-xs-regular{
+        @apply font-nunito text-xs leading-[160%] font-normal;
+    }
+    .text-xs-bold{
+        @apply font-nunito text-xs leading-[160%] font-bold;
+    }
 }

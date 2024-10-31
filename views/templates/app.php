@@ -11,10 +11,10 @@
 </head>
 <body class="bg-gray-100 text-white">
     <header class="w-full">
-        <nav class="flex mx-auto justify-between px-8 py-4">
-            <div>Logo</div>
-            <div>Menu</div>
-            <div>Login</div>
+        <nav class="flex w-full mx-auto justify-between items-center px-8 py-4">
+            <div class="w-16 h-16"><a href="/"><img src="/images/Logo.svg" alt="Logo AB Filmes"></a></div>
+            <div class="flex w-1/4 justify-center items-center gap-6"><?php include('../components/menu-item.php'); ?></div>
+            <div class="text-sm-regular text-gray-600"><a href="/login" class="hover:underline">Login/Registrar</a></div>
         </nav>
     </header>
     <main class="max-w-1192 mx-auto mt-14">
