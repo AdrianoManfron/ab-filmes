@@ -8,7 +8,7 @@
     foreach($itens as $item):
 ?>
 <ul class="flex w-1/3">
-    <li class="group text-gray-500"><a href="<?=$item['link']?>" class="flex w-full justify-center items-center px-3 py-2 gap-2 rounded-md hover:bg-gray-200 active:bg-gray-300 active:text-purple-light duration-150"><?=$item['icon']?><?=$item['name']?></a></li>
+    <li class="group text-gray-500"><a href="<?=$item['link']?>" class="flex w-full input-text justify-center items-center px-3 py-2 gap-2 rounded-md hover:bg-gray-200 active:bg-gray-300 active:text-purple-light duration-150"><?=$item['icon']?><?=$item['name']?></a></li>
 </ul>
 
 <?php endforeach; ?>
