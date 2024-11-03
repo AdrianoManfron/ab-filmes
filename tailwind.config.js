@@ -23,7 +23,7 @@ module.exports = {
         'white': '#FFFFFF',
       },
       backgroundImage: {
-        'login-register': "url('/public/images/Login.png')",
+        'login-register': "url('/images/Login.png')",
       },
       maxWidth: {
         '1192': '1192px',

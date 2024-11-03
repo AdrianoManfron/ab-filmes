@@ -7,6 +7,13 @@ function view($view, $data = []){
     require "views/templates/app.php";
 }
 
+function viewLogin($view, $data = []){
+    foreach($data as $key => $value){
+        $$key = $value;
+    }
+    require "views/templates/login.php";
+}
+
 function dd(...$dump){
     echo '<pre>';
     var_dump($dump);
