@@ -1,5 +1,5 @@
 <?php
-function card($poster, $alt, $title, $category, $year, $rating, $description, $link)
+function card($poster, $title, $category, $year, $rating, $description, $link)
 {
 ?>
     <a href="<?=$link?>" class="w-[280px] h-[360px] rounded-xl overflow-hidden group relative">
@@ -10,7 +10,7 @@ function card($poster, $alt, $title, $category, $year, $rating, $description, $l
                 </svg></div>
         </div>
         <div class="before:absolute before:-bottom-[45%] before:left-0 before:w-full before:h-full z-10 duration-1000 top-0 left-0 w-full h-full overflow-hidden group-hover:before:bottom-0">
-            <img src="<?=$poster?>" alt="<?=$alt?>" class="absolute top-0 left-0 w-full h-full object-cover rounded-xl duration-500 group-hover:scale-110">
+            <img src="<?=$poster?>" alt="Poster do filme" class="absolute top-0 left-0 w-full h-full object-cover rounded-xl duration-500 group-hover:scale-110">
         </div>
         <div class="absolute opacity-0 top-0 left-0 w-full h-full duration-500 z-20 group-hover:opacity-100 bg-gradient-to-t from-[#090910d5] from-0% via-[#090910b4] via-50% to-[#09091000] to-100%"></div>
         <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#090910] from-0% to-[#09091000] to-73% z-30">

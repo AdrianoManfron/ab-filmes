@@ -21,13 +21,52 @@ function dd(...$dump){
     die();
 }
 
-function abort($code)
+function abort($code, $database = null)
 {
     http_response_code($code);
 
-    view($code);
+    if(! auth()){
+        $usuario = '';
+    } else{
+        $id = auth()->id;
+        $usuario = $database->query(
+            query:"select * from usuarios where id = $id",
+            class: Usuario::class
+            )->fetch();
+    }
+
+    view($code, compact('usuario'));
 
     die();
+}
+
+function user($database){
+    if(! auth()){
+        $usuario = $database->query(
+            query:"select * from usuarios",
+            class: Usuario::class
+        )->fetchAll();
+        
+        foreach ($usuario as $u){
+            $usuario []= $u->nome;
+            $usuario []= $u->avatar;
+        }
+
+        return $usuario;
+
+    } else{
+        $id = auth()->id;
+        $usuario = $database->query(
+            query:"select * from usuarios where id = $id",
+            class: Usuario::class
+            )->fetch();
+    }
+
+    return $usuario;
+}
+
+function flash(){
+    return new Flash;
 }
 
 function config($chave = null){

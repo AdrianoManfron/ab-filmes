@@ -13,11 +13,25 @@
     <header class="w-full">
         <nav class="flex w-full mx-auto justify-between items-center px-8 py-4">
             <div class="w-16 h-16"><a href="/"><img src="/images/Logo.svg" alt="Logo AB Filmes"></a></div>
-            <div class="flex mx-auto justify-center items-center gap-6"><?php include('../views/menu.view.php'); ?></div>
-            <div class="input-text text-white"><?php include('../views/button-login.view.php'); ?></div>
+            <div class="flex mx-auto justify-center items-center gap-6"><?php require '../views/partials/_menu.php'; ?></div>
+            <?php if(! auth()): ?>
+                <div class="input-text text-white"><?php require '../views/partials/_button-login.php'; ?></div>
+            <?php else: ?>
+                <div class="flex gap-3 input-text text-gray-600">
+                    <div class="flex justify-center items-center pr-3 gap-3">
+                        Olá, <?=auth()->nome?>
+                        <?php if($usuario->avatar) : ?>
+                            <img src="<?=$usuario->avatar?>" alt="Avatar Próprio" class="w-8 h-8 border border-purple-base rounded-md" />
+                        <?php else : ?>
+                            <img src="/images/Logo.svg" alt="Avatar Padrão" class="w-8 h-8 border border-purple-base rounded-md" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="flex justify-center items-center w-8 h-8 bg-gray-300 rounded-md"><?php require '../views/partials/_button-logout.php'; ?></div>
+                </div>
+            <?php endif; ?>
         </nav>
     </header>
-    <main class="max-w-1192 mx-auto mt-14">
+    <main class="w-full">
         <?php require "../views/{$view}.view.php"; ?>
     </main>
 </body>

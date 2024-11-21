@@ -21,7 +21,7 @@
         </section>
         <section class="flex flex-col justify-center items-center flex-1 w-screen h-screen">
             <div class="flex flex-col w-80 gap-14">
-                <?php include "../views/menu-login.view.php"; ?>
+                <?php require '../views/partials/_menu-login.php'; ?>
                 <?php require "../views/{$view}.view.php"; ?>
             </div>
         </section>
