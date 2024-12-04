@@ -15,9 +15,9 @@ foreach($avaliacoesFilmes as $key => $filmes){
 }
 
 // Avaliações do filme
-$avaliacoes = $database->query("select u.id, u.nome, u.avatar, a.usuario_id, a.usuario_avatar, a.filme_id, a.avaliacao, a.nota, ac.count_avaliacoes, ac.usuario_id
+$avaliacoes = $database->query("select u.id, u.nome, u.avatar, a.usuario_id, a.filme_id, a.avaliacao, a.nota, ac.count_avaliacoes, ac.usuario_id
                                 from usuarios as u right join avaliacoes as a, avaliacoesContagem as ac on u.id = a.usuario_id and a.usuario_id = ac.usuario_id where filme_id = :id and a.usuario_id = u.id
-                                group by u.id, u.nome, u.avatar, a.usuario_id, a.usuario_avatar, a.filme_id, a.avaliacao, a.nota, ac.count_avaliacoes, ac.usuario_id", 
+                                group by u.id, u.nome, u.avatar, a.usuario_id, a.filme_id, a.avaliacao, a.nota, ac.count_avaliacoes, ac.usuario_id", 
                                 Avaliacao::class, ['id' => $_GET['id']])->fetchAll();
 
 // carrega informações do usuário
